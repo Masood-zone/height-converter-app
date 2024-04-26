@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="309.0" style="-fx-background-color: #2B1C03;">
+         <children>
+            <ImageView fitHeight="352.0" fitWidth="310.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@side-pic.jpeg" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="87.0" prefWidth="310.0">
+               <children>
+                  <Label alignment="CENTER" layoutY="1.0" prefHeight="87.0" prefWidth="310.0" text="Metric-US Height Converter" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" spread="0.32" />
+         </effect>
+      </Pane>
+      <Pane layoutX="310.0" prefHeight="400.0" prefWidth="289.0">
+         <children>
+            <HBox layoutY="14.0" prefHeight="51.0" prefWidth="290.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="TOP" prefHeight="62.0" prefWidth="290.0" style="-fx-padding: 0;" text="Enter US/Metric Unit to convert" textFill="#2b1c03" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="65.0" prefHeight="36.0" prefWidth="290.0">
+               <children>
+                  <Label prefHeight="36.0" prefWidth="258.0" text="Convert Metric to US Unit">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="102.0" prefHeight="14.0" prefWidth="258.0" style="-fx-spacing: 8;">
+               <children>
+                  <TextField fx:id="inchesField" prefHeight="37.0" prefWidth="130.0" promptText="Inches" />
+                  <TextField fx:id="feetField" prefHeight="37.0" prefWidth="130.0" promptText="Feet" />
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="200.0" prefHeight="36.0" prefWidth="258.0">
+               <children>
+                  <Label prefHeight="38.0" prefWidth="262.0" text="Convert US to Metric Unit">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="236.0" prefHeight="26.0" prefWidth="258.0" style="-fx-spacing: 8;">
+               <children>
+                  <TextField fx:id="cmField" prefHeight="26.0" prefWidth="258.0" promptText="(cm)" />
+               </children>
+            </HBox>
+            <Button fx:id="metricUsBtn" layoutX="147.0" layoutY="136.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: #2B1C03;" text="Convert" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="usResult" layoutX="14.0" layoutY="138.0" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: #00ff00;" textFill="WHITE" />
+            <Button fx:id="usMetricBrn" layoutX="148.0" layoutY="271.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #2B1C03;" text="Convert" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="metricResult" layoutX="14.0" layoutY="273.0" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: #00ff00;" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
